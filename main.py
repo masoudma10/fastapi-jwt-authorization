@@ -83,9 +83,8 @@ async def create_user(user: UserIn_Pydantic):
     return await User_Pydantic.from_tortoise_orm(user_obj)
 
 
-@app.put('/update_user',response_model=User_Pydantic)
-async def update_user(user: User_Pydantic=Depends((get_user_current))):
-    pass
+
+
 
 
 @app.get('/users/me', response_model=User_Pydantic)
